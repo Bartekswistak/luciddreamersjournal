@@ -13,4 +13,8 @@ end
     erb :index
   end
 
+  get '/about' do
+    erb :'/info/about'
+  end
+
 end
