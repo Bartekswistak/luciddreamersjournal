@@ -17,4 +17,8 @@ end
     erb :'/info/about'
   end
 
+  get '/tips' do
+    erb :'/info/tips'
+  end
+
 end
