@@ -21,4 +21,8 @@ end
     erb :'/info/tips'
   end
 
+  get '/playtime' do
+    erb :'/info/playtime'
+  end
+
 end
