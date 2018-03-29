@@ -19,6 +19,12 @@
         <a href="/login">Sign In</a>
       <% end %>
     </nav>
+
+    <% if logged_in? %>
+      <a href="/create_entry"> Create a new dream entry</a>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>
