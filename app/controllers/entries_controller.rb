@@ -27,6 +27,52 @@ class EntriesController < ApplicationController
     end
   end
 
+  get '/entries/:id' do
+   if session[:user_id]
+     @entry = Entry.find_by_id(params[:id])
+     erb :'entries/show'
+   else
+     redirect to '/login'
+   end
+ end
 
+ get '/entries/:id/edit' do
+   if session[:user_id]
+     @entry = Entry.find_by_id(params[:id])
+     if @entry.user_id == session[:user_id]
+      erb :'entries/edit'
+     else
+       redirect to '/entries/entries'
+     end
+   else
+     redirect to '/login'
+   end
+ end
+
+ patch '/entries/:id' do
+    if params[:content] == ""
+      redirect to "/entries/#{params[:id]}/edit"
+    else
+      @entry = Entry.find_by_id(params[:id])
+      @entry.content = params[:content]
+      @entry.save
+      redirect to "/entries/#{@entry.id}"
+    end
+  end
+
+  delete '/entries/:id/delete' do
+    @entry = Entry.find_by_id(params[:id])
+    if session[:user_id]
+      @entry = Entry.find_by_id(params[:id])
+      if @entry.user_id == session[:user_id]
+        @entry.delete
+        redirect to '/entries'
+      else
+        redirect to '/entries'
+      end
+    else
+      redirect to '/login'
+    end
+  end
 
 end

@@ -1,5 +1,5 @@
 <form method="post" action="/entries/<%=@entry.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <input type="text" name="content" value="<%= @entry.content %>">
+  <TEXTAREA Name="content" ROWS=2 COLS=20> value="<%= @entry.content %>"></TEXTAREA>
   <input type="submit" value="submit">
 </form>
