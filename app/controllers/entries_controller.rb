@@ -49,7 +49,7 @@ class EntriesController < ApplicationController
    end
  end
 
- patch '/entries/:id' do
+ post '/entries/:id' do
     if params[:content] == ""
       redirect to "/entries/#{params[:id]}/edit"
     else
@@ -60,15 +60,15 @@ class EntriesController < ApplicationController
     end
   end
 
-  delete '/entries/:id/delete' do
+  post '/entries/:id/delete' do
     @entry = Entry.find_by_id(params[:id])
     if session[:user_id]
       @entry = Entry.find_by_id(params[:id])
       if @entry.user_id == session[:user_id]
         @entry.delete
-        redirect to '/entries'
+        redirect to '/entries/entries'
       else
-        redirect to '/entries'
+        redirect to '/entries/entries'
       end
     else
       redirect to '/login'

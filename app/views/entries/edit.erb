@@ -1,5 +1,7 @@
-<form method="post" action="/entries/<%=@entry.id%>">
+<h2>Edit your Dream Entry</h2>
+
+<form method="POST" action="/entries/<%=@entry.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <TEXTAREA Name="content" ROWS=2 COLS=20> value="<%= @entry.content %>"></TEXTAREA>
+  <TEXTAREA Name="content" ROWS=2 COLS=20> "<%= @entry.content %>"></TEXTAREA>
   <input type="submit" value="submit">
 </form>
