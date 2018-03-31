@@ -1,5 +1,9 @@
 <% @entries.each do |entry| %>
   <div>
-    <%= "~  #{entry.content} - #{entry.date}" %>
+    <%= "~  #{entry.content}  #{entry.date}" %>
+    <br>
+      <% if !!"#{checkbox}" %>
+        <%= "(LUCID)" %>
+      <%end%>
   </div>
 <%end%>
