@@ -1,6 +1,8 @@
 <h2>Edit your Dream Entry</h2>
 
 <form method="POST" action="/entries/<%=@entry.id%>">
+  <input id="date" type="date" name="date">
+  <br>
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   <TEXTAREA Name="content" ROWS=2 COLS=20> "<%= @entry.content %>"></TEXTAREA>
   <input type="submit" value="submit">

@@ -2,7 +2,10 @@ class EntriesController < ApplicationController
 
   get '/entries/entries' do
     if session[:user_id]
-      @entries = Entry.all
+      @entries = Entry.find_each do |entry|
+        entry.user_id == current_user.id
+      end
+      @entries
       erb :'entries/entries'
     else
       redirect to '/login'
