@@ -1,20 +1,28 @@
 h1 {
   text-align: center;
-  color: green;
+  color: white;
   text-shadow: 2px;
+  position: relative;
+  bottom : 1000px;
 }
 h2 {
   text-align: center;
   color: green;
+  position: relative;
+  bottom: 80px;
 }
 h3 {
   color: white;
 }
 .author {
-  text-align: center;
+  position: relative;
+  text-align: left;
 }
 .content {
   color: white;
+}
+.image {
+  position: relative;
 }
 body {
   background-color: black;
