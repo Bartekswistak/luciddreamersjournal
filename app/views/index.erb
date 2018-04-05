@@ -1,6 +1,6 @@
 <% if logged_in? %>
 
-  <h1> <%= current_user.username %>'s Dream Journal </h1>
+  <h1 class="author"> <%= current_user.username %>'s Dream Journal </h1>
 
   <% @entries = current_user.entries %>
   <% @entries.each do |entry| %>
