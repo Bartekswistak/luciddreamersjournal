@@ -31,15 +31,12 @@
       </nav>
     </div>
 
-    <br>
-
     <%= yield %>
 
-    <br>
-
-
     <% if logged_in? %>
-      <a href="/create_entry"> Create a New Dream Entry</a>
+    <form method="get" action="/create_entry">
+        <button type="submit">Create New Dream Entry</button>
+    </form>
     <% end %>
 
   </body>

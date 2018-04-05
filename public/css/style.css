@@ -2,8 +2,8 @@ h1 {
   text-align: center;
   color: white;
   text-shadow: 2px;
-  position: relative;
-  bottom : 1000px;
+  position: fixed;
+  top:40px;
 }
 h2 {
   text-align: center;
@@ -17,6 +17,7 @@ h3 {
 .author {
   position: relative;
   text-align: left;
+  top: 10px;
 }
 .content {
   color: white;
@@ -24,6 +25,11 @@ h3 {
 .image {
   position: relative;
 }
+.resources {
+  position: relative;
+  bottom: 100px;
+}
+
 body {
   background-color: black;
 }
@@ -38,9 +44,12 @@ p {
   width:100%;
   box-shadow:0px 1px 3px rgba(0,0,0,0.2);
   background:#3e3436;
+  position: fixed;
+  top: 100px;
+  left: 100px;
 }
 .menu {
-  width:1000px;
+  width:100%;
   margin:0px auto;
 }
 .menu li {
