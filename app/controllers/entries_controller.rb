@@ -10,7 +10,6 @@ class EntriesController < ApplicationController
     end
   end
 
-
   get '/create_entry' do
     if logged_in?
       erb :'entries/create_entry'
@@ -57,6 +56,7 @@ class EntriesController < ApplicationController
     else
       @entry = Entry.find_by_id(params[:id])
       @entry.content = params[:content]
+      @entry.date = params[:date]
       @entry.save
       redirect to "/entries/#{@entry.id}"
     end
