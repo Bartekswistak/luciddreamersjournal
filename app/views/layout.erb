@@ -3,29 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Lucid Dreamers Journal</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
     <h1>WELCOME TO THE LUCID DREAMERS JOURNAL</h1>
     <h2>The interactive journal to record dreams and become an avid lucid dreamer!</h2>
   </head>
   <body>
-    <nav class="menu">
+<div class="menu-wrap">
+  <nav class="menu">
       <ul class="clearfix">
           <% if logged_in? %>
         <li><a href="/">Home</a></li>
-        <a href="#">Resources <span class="arrow">&#9660;</span></a>
-        <ul class="sub-menu">
+        <li><a href="#">Resources <span class="arrow">&#9660;</span></a>
+          <ul class="sub-menu">
           <li><a href="/about">About Lucid Dreaming</a></li>
           <li><a href="/tips">Tips and Tricks to Become Lucid</a></li>
           <li><a href="/playtime">What To Do When Lucid</a></li>
       </ul>
-        <a href="/logout">Log Out</a>
+      </li>
+      <li><a href="/logout">Log Out</a></li>
 
       <% else %>
         <a href="/signup">Sign Up</a>
         <a href="/login">Sign In</a>
       <% end %>
-    </ul>
-    </nav>
+      </ul>
+      </nav>
+    </div>
 
+    <br>
+    
     <%= yield %>
 
     <br>

@@ -4,7 +4,7 @@
 
   <% @entries = current_user.entries %>
   <% @entries.each do |entry| %>
-    <div>
+    <div class="content">
       <%= "  #{entry.date}" %>
       <%= "~  #{entry.content}" %>
       <a href="/entries/<%=entry.id%>">Edit/Delete </a>
