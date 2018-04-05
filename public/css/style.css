@@ -1,11 +1,14 @@
 h1 {
   text-align: center;
-  color: blue;
+  color: green;
   text-shadow: 2px;
 }
 h2 {
   text-align: center;
-  color: blue;
+  color: green;
+}
+h3 {
+  color: white;
 }
 .author {
   text-align: center;
@@ -14,10 +17,10 @@ h2 {
   color: white;
 }
 body {
-  background: black;
+  background-color: black;
 }
-img {
-  width: 100%;
+p {
+  color: white;
 }
 .clearfix:after {
   display:block;
@@ -35,7 +38,6 @@ img {
 .menu li {
   margin:0px;
   list-style:none;
-  font-family:'Ek Mukta';
 }
 .menu a {
   transition:all linear 0.15s;
