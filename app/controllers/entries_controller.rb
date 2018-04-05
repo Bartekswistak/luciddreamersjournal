@@ -1,10 +1,10 @@
 class EntriesController < ApplicationController
 
-  get '/entries/entries' do
-    if !!session[:user_id]
+  get '/' do
+    if logged_in?
       # @entries = Entry.all.where('user.id == current_user.id')
       @entries = current_user.entries
-      erb :'entries/entries'
+      erb :index
     else
       redirect to '/login'
     end
@@ -25,7 +25,7 @@ class EntriesController < ApplicationController
     else
       user = User.find_by_id(session[:user_id])
       @entry = Entry.create(:content => params[:content], :date => params[:date], :user_id => user.id)
-      redirect to '/entries/entries'
+      redirect to '/'
     end
   end
 
@@ -44,7 +44,7 @@ class EntriesController < ApplicationController
      if @entry.user_id == session[:user_id]
       erb :'entries/edit'
      else
-       redirect to '/entries/entries'
+       redirect to '/'
      end
    else
      redirect to '/login'
@@ -68,9 +68,9 @@ class EntriesController < ApplicationController
       @entry = Entry.find_by_id(params[:id])
       if @entry.user_id == session[:user_id]
         @entry.delete
-        redirect to '/entries/entries'
+        redirect to '/'
       else
-        redirect to '/entries/entries'
+        redirect to '/'
       end
     else
       redirect to '/login'
