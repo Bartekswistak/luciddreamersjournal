@@ -3,8 +3,6 @@ class EntriesController < ApplicationController
   get '/entries/entries' do
     if !!session[:user_id]
       # @entries = Entry.all.where('user.id == current_user.id')
-      binding.pry
-      # current_user.methods
       @entries = current_user.entries
       erb :'entries/entries'
     else
@@ -32,7 +30,7 @@ class EntriesController < ApplicationController
   end
 
   get '/entries/:id' do
-   if session[:user_id]
+   if logged_in?
      @entry = Entry.find_by_id(params[:id])
      erb :'entries/show'
    else
@@ -41,7 +39,7 @@ class EntriesController < ApplicationController
  end
 
  get '/entries/:id/edit' do
-   if session[:user_id]
+   if logged_in?
      @entry = Entry.find_by_id(params[:id])
      if @entry.user_id == session[:user_id]
       erb :'entries/edit'
@@ -66,7 +64,7 @@ class EntriesController < ApplicationController
 
   post '/entries/:id/delete' do
     @entry = Entry.find_by_id(params[:id])
-    if session[:user_id]
+    if logged_in?
       @entry = Entry.find_by_id(params[:id])
       if @entry.user_id == session[:user_id]
         @entry.delete
