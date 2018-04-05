@@ -14,7 +14,10 @@ h2 {
   color: white;
 }
 body {
-  background: brown;
+  background: black;
+}
+img {
+  width: 100%;
 }
 .clearfix:after {
   display:block;
