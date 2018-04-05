@@ -2,7 +2,10 @@ class EntriesController < ApplicationController
 
   get '/entries/entries' do
     if !!session[:user_id]
-      @entries = Entry.all
+      # @entries = Entry.all.where('user.id == current_user.id')
+      binding.pry
+      # current_user.methods
+      @entries = current_user.entries
       erb :'entries/entries'
     else
       redirect to '/login'
@@ -11,7 +14,7 @@ class EntriesController < ApplicationController
 
 
   get '/create_entry' do
-    if session[:user_id]
+    if logged_in?
       erb :'entries/create_entry'
     else
       redirect to '/login'
