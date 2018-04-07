@@ -30,6 +30,7 @@ h3 {
   position: relative;
   text-align: center;
   font-size: 3em;
+  bottom: 125px;
 }
 .content {
   color: white;
@@ -44,6 +45,9 @@ h3 {
 }
 body {
   background-color: black;
+}
+textarea {
+   resize: none;
 }
 p {
   color: white;
