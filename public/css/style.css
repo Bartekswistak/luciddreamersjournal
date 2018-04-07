@@ -1,5 +1,6 @@
-h1 {
+.title {
   text-align: center;
+  font-size: 4em;
   color: white;
   text-shadow: 2px;
   position: fixed;
@@ -7,17 +8,22 @@ h1 {
 }
 h2 {
   text-align: center;
-  color: green;
+  color: white;
   position: relative;
   bottom: 80px;
 }
 h3 {
   color: white;
 }
+.subtitle {
+  position: fixed;
+  top: 250px;
+  font-size: 2em;
+}
 .author {
   position: relative;
-  text-align: left;
-  top: 10px;
+  text-align: center;
+  font-size: 3em;
 }
 .content {
   color: white;
@@ -29,7 +35,6 @@ h3 {
   position: relative;
   bottom: 100px;
 }
-
 body {
   background-color: black;
 }
