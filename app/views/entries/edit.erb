@@ -1,9 +1,11 @@
 <h2>Edit your Dream Entry</h2>
+  <div class="new_entry">
 
-<form method="POST" action="/entries/<%=@entry.id%>">
-  <input id="date" type="date" name="date">
-  <br>
-  <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <TEXTAREA Name="content" ROWS=2 COLS=20> <%= @entry.content %></TEXTAREA>
-  <input type="submit" value="submit">
-</form>
+    <form method="POST" action="/entries/<%=@entry.id%>">
+      <input id="date" type="date" name="date">
+      <br>
+      <input id="hidden" type="hidden" name="_method" value="PATCH">
+      <TEXTAREA Name="content" ROWS=10 COLS=100> <%= @entry.content %></TEXTAREA>
+      <input type="submit" value="submit">
+    </form>
+  </div>

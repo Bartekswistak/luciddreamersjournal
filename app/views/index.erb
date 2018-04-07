@@ -5,8 +5,8 @@
   <% @entries = current_user.entries %>
   <% @entries.each do |entry| %>
     <div class="content">
-      <%= "  #{entry.date}" %>
-      <%= "~  #{entry.content}" %>
+      <%= " #{entry.content}" %>
+      <%= "Recorded on:  #{entry.date}" %>
       <br>
       <a href="/entries/<%=entry.id%>">Edit/Delete </a>
     </div>
