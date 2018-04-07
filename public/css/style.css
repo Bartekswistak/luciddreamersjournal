@@ -1,23 +1,24 @@
 .title {
-  text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   color: white;
-  text-shadow: 2px;
-  position: fixed;
-  top:40px;
+  position: absolute;
+  top:30px;
 }
 h2 {
   text-align: center;
   color: white;
   position: relative;
-  bottom: 80px;
+  bottom: 400px;
+  right: 350px;
 }
 h3 {
   color: white;
+  position: fixed;
+  top: 600px;
 }
 .subtitle {
-  position: fixed;
-  top: 250px;
+  position: absolute;
+  top: 100px;
   font-size: 2em;
 }
 .author {
@@ -34,23 +35,35 @@ h3 {
 .resources {
   position: relative;
   bottom: 100px;
+  color: white;
 }
 body {
   background-color: black;
 }
 p {
   color: white;
+  bottom: 20px;
+}
+.forms {
+  position: fixed;
+  top: 700px;
+}
+.new_entry {
+  position: absolute;
+  text-align: center;
+  bottom: 275px;
+  left: 550px;
 }
 .clearfix:after {
   display:block;
   clear:both;
 }
 .menu-wrap {
-  width:100%;
+  width:80%;
   box-shadow:0px 1px 3px rgba(0,0,0,0.2);
-  background:#3e3436;
+  background:rgba(10,20,10,0.2);
   position: fixed;
-  top: 100px;
+  top: 175px;
   left: 100px;
 }
 .menu {
@@ -63,11 +76,11 @@ p {
 }
 .menu a {
   transition:all linear 0.15s;
-  color:#919191;
+  color: white;
 }
 .menu li:hover > a, .menu .current-item > a {
   text-decoration:none;
-  color:#be5b70;
+  color: red;
 }
 .menu .arrow {
   font-size:11px;
@@ -85,7 +98,7 @@ p {
   text-shadow:0px 1px 0px rgba(0,0,0,0.4);
 }
 .menu > ul > li:hover > a, .menu > ul > .current-item > a {
-  background:#2e2728;
+  background:silver;
 }
 .menu li:hover .sub-menu {
   z-index:1;
@@ -112,5 +125,5 @@ p {
   display:block;
 }
 .sub-menu li a:hover, .sub-menu .current-item a {
-  background:#3e3436;
+  background:silver;
 }
