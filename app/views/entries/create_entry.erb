@@ -5,6 +5,11 @@
       <br>
       <TEXTAREA Name="content" ROWS=10 COLS=100></TEXTAREA>
       <br>
+      <p>
+        <% if flash.has?(:message) %>
+        <%= flash[:message] %>
+        <% end %>
+      </p>
       <input class="btn btn-primary" type="submit" value="submit">
     </form>
 </div>
