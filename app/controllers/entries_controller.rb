@@ -20,7 +20,8 @@ class EntriesController < ApplicationController
 
   post '/entries' do
     if params[:content] == ""
-      redirect to '/entries/create_entry'
+      flash[:message] = "ERROR"
+      redirect to '/create_entry'
     else
       user = User.find_by_id(session[:user_id])
       @entry = Entry.create(:content => params[:content], :date => params[:date], :user_id => user.id)

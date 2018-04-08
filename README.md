@@ -11,6 +11,16 @@ Resources page will show a few tips and tricks on how to become lucid in your dr
 Users should be able to read over all journal entries and choose to edit, or
 delete any dream entries.
 
-Not quite sure how I want this app to interact between users, obviously users
-should only be able to edit, and delete their own entries, but maybe they can
-read other users entries and leave comments? Possible addition.
+To install:
+  -Fork and Clone the Repo from : https://github.com/Bartekswistak/luciddreamersjournal
+  -Make sure to run 'bundle install' and 'rake db:migrate'
+  -Run Shotgun to view the application in the browser
+
+Contributing
+  Bug reports and pull requests are welcome on GitHub at https://github.com/Bartekswistak/luciddreamersjournal This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+License
+  The gem is available as open source under the terms of the MIT License.
+
+Code of Conduct
+  Everyone interacting in the VegOut project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/)
