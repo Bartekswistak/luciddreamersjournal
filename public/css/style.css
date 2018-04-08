@@ -26,14 +26,25 @@ h3 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: lighter;
 }
-.author {
+.link a {
+  color: green;
+  text-decoration: none;
+}
+footer {
+  color: white;
   position: relative;
-  text-align: center;
+  left: 50px;
+  margin-top: 250px;
+}
+.author {
+  position: absolute;
   font-size: 3em;
-  bottom: 125px;
+  bottom: 80px;
   font-family: 'Fredericka the Great', cursive;
 }
 .content {
+  margin-left: 100px;
+  margin-right: 100px;
   color: white;
 }
 .image {
