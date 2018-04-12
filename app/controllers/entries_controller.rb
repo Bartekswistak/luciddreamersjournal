@@ -23,8 +23,9 @@ class EntriesController < ApplicationController
       flash[:message] = "Please make a valid dream entry"
       redirect to '/create_entry'
     else
-      user = User.find_by_id(session[:user_id])
-      @entry = Entry.create(:content => params[:content], :date => params[:date], :user_id => user.id)
+    #  user = User.find_by_id(session[:user_id])
+    #  @entry = Entry.create(:content => params[:content], :date => params[:date], :user_id => user.id)
+      current_user.entries.create(:content => params[:content], :date => params[:date])
       redirect to '/'
     end
   end
