@@ -1,7 +1,7 @@
 # Lucid Dreamers Journal
 A Sinatra Web Application that will allow users to log their dreams and allow for more lucid dreams.
 
-##Features
+## Features
 
 This will be an application that will allows users to log in and create journal
 entries of the nights previous dreams, also a feature to edit, delete, or create
@@ -17,6 +17,7 @@ delete any dream entries.
 
   -Fork and Clone the Repo from : https://github.com/Bartekswistak/luciddreamersjournal
  
+Make sure to run:
   ```
   bundle install 
   ```
@@ -28,13 +29,13 @@ delete any dream entries.
   shotgun
   ```
 
-  ##Built with Ruby and Sinatra
+  ## Built with Ruby and Sinatra
 
-#Contributing
+# Contributing
   Bug reports and pull requests are welcome on GitHub at https://github.com/Bartekswistak/luciddreamersjournal This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-#License
+# License
   The gem is available as open source under the terms of the MIT License.
 
-#Code of Conduct
+# Code of Conduct
   Everyone interacting in the VegOut project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/)
