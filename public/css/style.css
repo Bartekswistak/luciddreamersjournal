@@ -11,13 +11,13 @@ h2 {
   color: white;
   position: relative;
   bottom: 400px;
-  right: 350px;
+  left: 10px;
 }
 h3 {
   color: white;
-  position: relative;
+  position: fixed;
   text-align: center;
-  top: 100px;
+  top: 250px;
 }
 .subtitle {
   position: absolute;
@@ -66,8 +66,10 @@ p {
   color: white;
 }
 .forms {
-  position: center;
-  top: 500px;
+  position: fixed;
+  text-align: center;
+  top: 300px;
+  left: 10px;
 }
 .new_entry {
   position: absolute;
