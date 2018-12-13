@@ -15,8 +15,9 @@ h2 {
 }
 h3 {
   color: white;
-  position: fixed;
-  top: 600px;
+  position: relative;
+  text-align: center;
+  top: 100px;
 }
 .subtitle {
   position: absolute;
@@ -65,8 +66,8 @@ p {
   color: white;
 }
 .forms {
-  position: fixed;
-  top: 700px;
+  position: center;
+  top: 500px;
 }
 .new_entry {
   position: absolute;
@@ -109,7 +110,6 @@ p {
 }
 .menu > ul > li {
   float:left;
-  display:inline-block;
   position:relative;
   font-size:19px;
 }
